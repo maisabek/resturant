@@ -1,0 +1,98 @@
+
+.login{
+    .form-container{
+       background: -webkit-linear-gradient(right, rgb(9, 49, 49),rgb(8, 8, 8)); 
+       padding: 140px;
+       border-top-right-radius: 25%;
+       border-bottom-left-radius: 25%;
+       button{
+        width: 50%;
+        background: transparent;
+        color: white;
+        border: 1px solid #9C7C57; 
+        padding: 7px;
+        outline: none;
+    }
+    mat-label{color: white}
+    mat-form-field{
+        width: 100%;
+    color: white;
+    // padding: 40px;
+    }
+    }
+   .img1,.img2,.img3{
+       border: 7px solid rgb(9, 49, 49);
+       position: absolute;
+   }
+   .img1{
+       z-index: 1;
+       left: 54%;  
+       top: 11%;
+       width: 18%;
+   }
+   .img2{
+       z-index: 2;
+       left: 62%;
+       transition: all .5s ease-in-out;
+       animation: leftToRight 5s infinite;
+       width: 18%;height: 27%;
+   }
+   .img3{
+       box-shadow: 30px 30px 50px rgba(0,0,0,0.5);
+       -webkit-box-shadow:30px 30px 50px rgba(0, 0, 0, 0.5);
+       z-index: 3;
+       top: 32%;
+    left: 51%;
+    width: 18%;
+   }
+}
+@keyframes leftToRight{
+    0%{
+        transform: translateX(30px)
+    }
+    20%{
+        transform: translateX(-30px)
+    }
+    30%{
+        transform: translateX(-30px)
+    }
+    100%{
+        transform: translateX(30px)
+    }
+}
+
+@media(max-width:767px){
+    .login .img1{
+        left: 1%;
+        top: 42%;
+        width: 51%;
+    }
+    .login .img2 {
+        left: 8%;
+        width: 51%;
+}
+.login .img3 {
+
+    top: 47%;
+    left: 27%;
+    width: 51%;
+}
+.content{
+    margin-bottom: 339px;
+}
+.login .form-container {
+    padding: 79px;
+}
+}
+@media(min-width:768px) and (max-width:991px){
+    .login .form-container {
+        padding: 40px !important;
+    }
+  
+}
+@media(min-width:992px) and (max-width:1199px){
+    .login .form-container{
+        padding: 65px;
+    }
+
+}

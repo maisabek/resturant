@@ -1,0 +1,87 @@
+.footer1{
+    background:rgb(7, 34, 34) ;
+    .content{
+        text-align: center;
+        margin: 5% 0px;
+        font-family: 'Anton', sans-serif;
+        color: white;
+        font-family: cursive;
+        h5{
+            color: #9C7C57;  
+            font-family:"system-ui";
+        }
+        input[type="text"],button{
+            border: none;
+            outline: none;
+            padding: 18px;
+            color: #9C7C57;
+            background: rgb(11, 46, 46);
+            font-family: cursive;
+        
+        }
+        .subscribe{margin: 0 27%;width: 50%;}
+    }
+}
+
+
+.footer2{
+    background:rgb(7, 41, 41);
+    padding: 20px;
+    p{color:#9C7C57}
+    ul{
+        margin: 0 73%;
+       width: 29%;
+        li{
+            float: left;
+            list-style-type: none;
+            margin: 0px 4px;
+            border: 1px solid gray;
+            padding: 6px;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 11%;
+            line-height: 25%;
+            text-align: center;
+        }
+        a{color: white}
+    }
+}
+
+@media (max-width: 767px ){/* mobile & tablet*/
+    .footer1 .content .subscribe{
+        margin: 0 0%;
+        width: 95%;
+    }
+    .footer1 .subscribe-btn{
+        width: 77% !important;
+    }
+    .footer2 ul{
+        margin: 0 7%;
+        width: 68%;
+
+    }
+
+
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+   .footer1 .content .subscribe{
+        margin: 0 0%;
+        width: 95%;
+    }
+    .footer1 .subscribe-btn{
+        width: 77% !important;
+    }
+    .footer2 ul{
+        margin: 0 7%;
+        width: 68%;
+        
+    }
+    
+
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+.footer1 .subscribe-btn{
+    width: 51%;
+}
+
+}

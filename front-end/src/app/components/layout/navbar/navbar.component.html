@@ -1,0 +1,57 @@
+
+<ng-container>
+    <mat-sidenav-container class="example-container">
+
+        <mat-sidenav #sidenav mode="over" closed class="example-sidenav justify-content-center text-center"
+            [fixedInViewport]="true">
+            <app-cart></app-cart>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <!-- <app-home></app-home> -->
+            <div class="navbar" id="navbar" style="z-index: 38;">
+                <div class="container">
+                    <div class="col-md-1 col-3 ml-5" style="margin: 0 7%">
+                       <a routerLink="">
+                        <div class="logo">
+                            <img src="assets/images/logo2.png" class="w-100 h-100" alt="">
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-md-9 col-7">
+                        <div class="w-100">
+                        <ul>
+                           
+                            <li style="margin-left:24%;"><a [matMenuTriggerFor]="menu">
+                                <i class="fa fa-align-left" style="font-size:22px" aria-hidden="true"></i>
+                            </a></li>
+                            <li style="margin-top: -1%;">
+                                    <a>
+                                        <button mat-icon-button (click)="sidenav.toggle()"
+                                            style="outline:none;margin: -5% 0px;">
+                                            <i class="fa fa-cart-plus" style="font-size:25px"  aria-hidden="true"></i>
+                                        </button>
+                                    </a>
+                                </li>
+                            <div class="clearfix"></div>
+                            <mat-menu #menu="matMenu">
+                                <a mat-menu-item>Home</a>
+                                <a mat-menu-item routerLink="/login">Login</a>
+                                <a mat-menu-item routerLink="/register">Register</a>
+                            </mat-menu>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <app-home></app-home> -->
+            <router-outlet></router-outlet>
+
+            <app-footer></app-footer>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+
+
+</ng-container>

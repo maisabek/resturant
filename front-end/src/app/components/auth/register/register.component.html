@@ -1,0 +1,61 @@
+<div class="page-wrapper bg-black p-t-180 p-b-100 font-robo">
+    <div class="wrapper wrapper--w960">
+        <div class="card card-2">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Registration Info</h2>
+                <form [formGroup]='register' (ngSubmit)="onSubmit()">
+
+                    <div class="input-group">
+                        <input formControlName='fname' class="input--style-2" type="text" placeholder="Name">
+
+                    </div>
+
+                    <div *ngIf='register.get("fname").invalid && register.get("fname").touched
+                    && register.get("fname").dirty ' class="alert alert-danger" role="alert">
+                        This filed is required
+                    </div>
+      
+                    <div class="input-group">
+                        <input formControlName='email' class="input--style-2" type="email" placeholder="email">
+
+                    </div>
+
+                    <div *ngIf='register.get("email").invalid && register.get("email").touched
+                    && register.get("email").dirty ' class="alert alert-danger" role="alert">
+                        This filed is required
+                    </div>
+
+                    <div class="input-group">
+                        <input formControlName='password' class="input--style-2" type="password" placeholder="password">
+
+                    </div>
+
+                    <div *ngIf='register.get("password").invalid && register.get("password").touched
+                    && register.get("password").dirty ' class="alert alert-danger" role="alert">
+                        This filed is required
+                    </div>
+
+                    <div class="input-group">
+                        <input formControlName='phone' class="input--style-2" type="text" placeholder="Phone">
+                    </div>
+
+                    <div *ngIf='register.get("phone").touched
+                    && register.get("phone").invalid' class="alert alert-danger" role="alert">
+
+
+                    <div *ngIf="register.get('phone')?.errors.required"> This filed is required</div>
+                    <div *ngIf="register.get('phone')?.errors.maxlength">phone should be 11 number</div>
+
+
+                    </div>
+
+                    <div class="p-t-30">
+                        <button class="btn btn--radius btn--green" type="submit"
+                            [disabled]="!register.valid">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
