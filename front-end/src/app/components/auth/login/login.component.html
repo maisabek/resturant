@@ -11,8 +11,11 @@
                 <br>
                 <mat-form-field>
                         <mat-label>password</mat-label>
-                      <input type="password" matInput formControlName="password" #password>
-                      </mat-form-field>
+                      <input [type]="showPass? 'password':'text'"  matInput formControlName="password" #password>
+                        <button (click)="showPass != showPass" mat-icon-button type="button">
+                      <mat-icon>{{showPass ? 'visibility_off':'visibility'}}</mat-icon>
+                    </button>
+                    </mat-form-field>
                       <br>
                       <button (click)="onSignIn(email.value,password.value)" class="mt-4">Login</button>
           </form>

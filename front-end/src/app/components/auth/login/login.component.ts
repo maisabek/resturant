@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   formBuild:FormGroup
+  showPass:boolean=false
   constructor(private fb:FormBuilder,public auth:AuthService) { }
   ngOnInit(): void {
     this.formBuild=this.fb.group({

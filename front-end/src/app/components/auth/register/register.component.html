@@ -27,7 +27,10 @@
                     </div>
 
                     <div class="input-group">
-                        <input formControlName='password' class="input--style-2" type="password" placeholder="password" #password>
+                        <input formControlName='password' class="input--style-2" [type]="showPass ? 'password':'text' " placeholder="password" #password>
+                        <button (click)="showPass != showPass" mat-icon-button type="button">
+                            <mat-icon>{{showPass ? 'visibility_off':'visibility'}}</mat-icon>
+                        </button>
 
                     </div>
 

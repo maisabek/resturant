@@ -27,7 +27,7 @@ import { environment } from 'src/environments/environment';
 import {AngularFireDatabaseModule} from '@angular/fire/database'
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {PopoverModule} from "ngx-smart-popover";
-import { interceptors } from './services';
+import { interceptors } from './services/index';
 
 @NgModule({
   declarations: [

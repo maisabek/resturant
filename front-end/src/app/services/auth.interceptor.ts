@@ -1,7 +1,8 @@
 import { HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
-import { Injector } from "@angular/core";
+import { Injectable, Injector } from "@angular/core";
 import { AuthService } from "./auth.service";
 
+@Injectable({providedIn:'root'})
 export class authInterceptor implements HttpInterceptor{
     constructor(private inject:Injector){}
     intercept(req:HttpRequest<any>,next:HttpHandler){
