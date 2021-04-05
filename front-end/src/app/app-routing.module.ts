@@ -9,6 +9,9 @@ import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 import { ResturantsComponent } from './components/resturants/resturants.component';
 import {LoginComponent} from './components/auth/login/login.component'
 import { RegisterComponent } from './components/auth/register/register.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { ResourceNotFoundComponent } from './shared/resource-not-found/resource-not-found.component';
+import { ApplicationErrorComponent } from './shared/application-error/application-error.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'menu',component:MenuComponent},
@@ -18,7 +21,10 @@ const routes: Routes = [
   {path:'feedbacks',component:FeedbacksComponent},
   {path:'resturant',component:ResturantsComponent},
   {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent}
+  {path:'register',component:RegisterComponent},
+  {path:'pageNotFound',component:PageNotFoundComponent},
+   {path:'resourceNotFound',component:ResourceNotFoundComponent},
+   {path:'applicationError',component:ApplicationErrorComponent}
 ];
 
 @NgModule({

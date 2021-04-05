@@ -4,10 +4,10 @@
             <div class="card-heading"></div>
             <div class="card-body">
                 <h2 class="title">Registration Info</h2>
-                <form [formGroup]='register' (ngSubmit)="onSubmit()">
+                <form [formGroup]='register'>
 
                     <div class="input-group">
-                        <input formControlName='fname' class="input--style-2" type="text" placeholder="Name">
+                        <input formControlName='fname' class="input--style-2" type="text" placeholder="Name" #fname>
 
                     </div>
 
@@ -17,7 +17,7 @@
                     </div>
       
                     <div class="input-group">
-                        <input formControlName='email' class="input--style-2" type="email" placeholder="email">
+                        <input formControlName='email' class="input--style-2" type="email" placeholder="email" #email>
 
                     </div>
 
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="input-group">
-                        <input formControlName='password' class="input--style-2" type="password" placeholder="password">
+                        <input formControlName='password' class="input--style-2" type="password" placeholder="password" #password>
 
                     </div>
 
@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="input-group">
-                        <input formControlName='phone' class="input--style-2" type="text" placeholder="Phone">
+                        <input formControlName='phone' class="input--style-2" type="text" placeholder="Phone" #phone>
                     </div>
 
                     <div *ngIf='register.get("phone").touched
@@ -51,8 +51,8 @@
                     </div>
 
                     <div class="p-t-30">
-                        <button class="btn btn--radius btn--green" type="submit"
-                            [disabled]="!register.valid">Register</button>
+                        <button class="btn btn--radius btn--green"
+                            [disabled]="!register.valid" (click)="onSignIn(email.value,password.value)">Register</button>
                     </div>
                 </form>
             </div>

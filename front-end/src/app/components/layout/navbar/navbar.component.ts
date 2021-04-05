@@ -1,4 +1,5 @@
 import { Component, OnInit,HostListener } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,11 +7,21 @@ import { Component, OnInit,HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  isSignedIn=false
+  constructor(public authService:AuthService) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('user') !== null){
+      this.isSignedIn=true
+    }else{
+      this.isSignedIn=false
+    }
   }
+
+  logout(){
+    this.authService.logout()
+  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (document.body.scrollTop > 0 ||

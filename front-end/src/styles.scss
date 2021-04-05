@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 html, body { height: 100%;background: rgb(1, 16, 17); }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 .mat-form-field-ripple {
     background-color: white !important;
 }

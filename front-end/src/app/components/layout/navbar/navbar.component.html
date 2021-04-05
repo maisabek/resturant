@@ -38,6 +38,7 @@
                                 <a mat-menu-item>Home</a>
                                 <a mat-menu-item routerLink="/login">Login</a>
                                 <a mat-menu-item routerLink="/register">Register</a>
+                                <a mat-menu-item *ngIf="authService.isLoggedIn" (click)="logout()">LogOut</a>
                             </mat-menu>
                         </ul>
                     </div>

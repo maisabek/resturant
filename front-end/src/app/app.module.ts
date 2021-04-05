@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
@@ -23,6 +22,12 @@ import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgwWowModule } from 'ngx-wow';
 import {NgxTypedJsModule} from 'ngx-typed-js';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import {AngularFireDatabaseModule} from '@angular/fire/database'
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import {PopoverModule} from "ngx-smart-popover";
+import { interceptors } from './services';
 
 @NgModule({
   declarations: [
@@ -51,9 +56,13 @@ import {NgxTypedJsModule} from 'ngx-typed-js';
     FormsModule,
     ReactiveFormsModule,
     NgwWowModule,
-    NgxTypedJsModule
-  ],
-  providers: [],
+    NgxTypedJsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    CarouselModule,
+    PopoverModule
+   ],
+  providers: [interceptors],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

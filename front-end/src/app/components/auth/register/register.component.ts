@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -11,10 +12,14 @@ export class RegisterComponent implements OnInit {
  
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,public auth:AuthService) { }
 
   ngOnInit(): void {
- 
+    if(localStorage.getItem('user') !== null){
+      this.isSignedIn=true
+    }else{
+      this.isSignedIn=false
+    }
  }
 
    register = new FormGroup({
@@ -24,8 +29,12 @@ export class RegisterComponent implements OnInit {
   phone: new FormControl("",[Validators.required,Validators.maxLength(11)])
 });
 
-onSubmit(){
- 
+
+isSignedIn=false
+async onSignIn(email:string,password:string){
+ await this.auth.signup(email,password)
+ if(this.auth.isLoggedIn)
+   this.isSignedIn=true
 }
 
 }

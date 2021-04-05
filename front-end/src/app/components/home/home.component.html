@@ -25,84 +25,238 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12  mt-5 mb-5" >
-                <h5>Our Services</h5>
+                <!-- <h5>Our Services</h5> -->
+                <h5 class="mt-4 mb-2">Enter In Every Card To See Our Services </h5>
                 <img src="assets/images/logo.png" class="ser-img" alt="">
             </div>
         <ng-container *ngFor="let item of innerPages">
         <div class="col-md-4 mt-5 h-75">
                 <a routerLink="/{{item.pagename}}">
+                    <div class="allcontent">
                     <div class="content h-75">
             <img [src]="item.img" class="w-100 h-100">
+            
         </div>
-            <p>{{item.title}}</p>
+        <div class="overlay">
+            <p style="color:#9C7C57;font-weight: bold;margin: 27% 0px;">Enter To See {{item.title}}</p>
+        </div>
+    </div>
+            <!-- <p>{{item.title}}</p> -->
         </a>
         </div>
+       
     </ng-container>
     </div></div>
 </div>
 <!-- end services -->
 
-<!-- <div class="review mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 mt-5 mb-5">
-                <h5>Reviews</h5>
-                <img src="assets/images/logo.png" style="margin-left: 42%" alt="">
-            </div>
-            <div class="col-md-5 mt-5">
-                <img src="assets/images/06.jpg" class="w-100 h-100" alt="">
-            </div>
-            <div class="col-md-6 mt-5">
-                    <mat-form-field appearance="fill">
-                            <mat-label>Enter Review</mat-label>
-                            <textarea matInput></textarea>
-                          </mat-form-field> 
-                          <div class="row">
-                                <div class="col-md-4 ml-5">
-                                        <button>send Review</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <button>See All Reviews</button>
-                                </div>
-                            </div>          
-            </div>
-           
-        </div>
-    </div>
-</div> -->
 
-<div class="location mt-5">
+<div class="mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mt-5">
-                    <img src="assets/images/logo.png" class="ser-img" alt="">
+            <div class="col-md-12  mt-5 mb-5" >
+                <h5>some foods in our resturant</h5>
+                <img src="assets/images/logo.png" class="ser-img" alt="">
             </div>
-            <div class="col-md-6 mt-5" style="height: 681px;">
-                <div class="content h-100" >
-                        <img src="assets/images/09.jpg" class="w-100 h-100"  alt="">
-                <div class="overlay">
-                    <p>hello</p>
-                </div>
-            <!-- <div class="location-img h-100"> -->
-            <!-- </div> -->
-        </div>
-            
-            </div>
-            <div class="col-md-6 mt-5" style="margin-left: -2%;">
-                    <iframe aria-hidden="true" frameborder="0" tabindex="-1" class="h-100" 
-                     style="width: 100%; height: 100%; top: 0px; left: 0px; border: none;"
-                     src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3456.6419301838555!2d30.923223!3d29.9609765!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1573909576260!5m2!1sar!2seg"
-                     >
-                          
-                       
-                    </iframe>
-            </div>
-        </div>
+            </div></div>
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide>
+      <div class="h-100" [popover]="myPopover">
+     <img src="assets/images/15.jpg" class="w-100" style="height:242px" alt="">
     </div>
+
+     <popover-content #myPopover 
+                title="drink" 
+                placement="left"
+                [animation]="true" 
+                 >
+    <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+
+
+  </ng-template>  
+  <ng-template carouselSlide class="h-50">
+    <div class="h-100" [popover]="myPopover">
+    <img src="assets/images/03.jpg" class="w-100" style="height:242px" alt="">
+    </div>
+    <popover-content #myPopover 
+    title="drink" 
+    placement="left"
+    [animation]="true" 
+     >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+  </ng-template>  
+  <ng-template carouselSlide class="h-50">
+    <div class="h-100" [popover]="myPopover">
+    <img src="assets/images/24.webp" class="w-100" style="height:242px" alt="">
+     </div>
+     <popover-content #myPopover 
+     title="drink" 
+     placement="left"
+     [animation]="true" 
+      >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+  </ng-template> 
+  <ng-template carouselSlide class="h-50">
+    <div class="h-100" [popover]="myPopover">
+    <img src="assets/images/03.jpg" class="w-100" style="height:242px" alt="">
+    </div>
+    <popover-content #myPopover 
+    title="drink" 
+    placement="left"
+    [animation]="true" 
+     >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+ </ng-template>  
+ <ng-template carouselSlide class="h-50">
+    <div class="h-100" [popover]="myPopover">
+   <img src="assets/images/17.jpg" class="w-100" style="height:242px" alt="">
+    </div>
+    <popover-content #myPopover 
+    title="drink" 
+    placement="left"
+    [animation]="true" 
+     >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+ </ng-template>  
+ <ng-template carouselSlide class="h-100">
+    <div class="h-50" [popover]="myPopover">
+   <img src="assets/images/head.jpg" class="w-100" style="height:242px" alt="">
+    </div>
+    <popover-content #myPopover 
+    title="drink" 
+    placement="left"
+    [animation]="true" 
+     >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+ </ng-template> 
+</owl-carousel-o>
+
 </div>
 
 
+<div>
+    <owl-carousel-o [options]="customOptions2">
+      <ng-template carouselSlide>
+          <div class="h-100" [popover]="myPopover">
+         <img src="assets/images/23.jpg" class="w-100" style="height:242px" alt="">
+        </div>
+        <popover-content #myPopover 
+        title="drink" 
+        placement="right"
+        [animation]="true" 
+         >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+      </ng-template>  
+      <ng-template carouselSlide class="h-50">
+        <div class="h-100" [popover]="myPopover">
+        <img src="assets/images/04.jpg" class="w-100" style="height:242px" alt="">
+        </div>
+        <popover-content #myPopover 
+        title="drink" 
+        placement="right"
+        [animation]="true" 
+         >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+      </ng-template>  
+      <ng-template carouselSlide class="h-50">
+        <div class="h-100" [popover]="myPopover">
+        <img src="assets/images/16.jpg" class="w-100" style="height:242px" alt="">
+         </div>
+         <popover-content #myPopover 
+         title="drink" 
+         placement="right"
+         [animation]="true" 
+          >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+      </ng-template> 
+      <ng-template carouselSlide class="h-50">
+        <div class="h-100" [popover]="myPopover">
+        <img src="assets/images/25.jpg" class="w-100" style="height:242px" alt="">
+        </div>
+        <popover-content #myPopover 
+        title="drink" 
+        placement="right"
+        [animation]="true" 
+         >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+     </ng-template>  
+     <ng-template carouselSlide class="h-50">
+        <div class="h-100" [popover]="myPopover">
+       <img src="assets/images/22.jpg" class="w-100" style="height:242px" alt="">
+        </div>
+        <popover-content #myPopover 
+        title="drink" 
+        placement="right"
+        [animation]="true" 
+         >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+     </ng-template>  
+     <ng-template carouselSlide class="h-100">
+        <div class="h-50" [popover]="myPopover">
+       <img src="assets/images/19.jpg" class="w-100" style="height:242px" alt="">
+        </div>
+        <popover-content #myPopover 
+        title="drink" 
+        placement="right"
+        [animation]="true" 
+         >
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+</popover-content>
+     </ng-template> 
+    </owl-carousel-o>
+    
+    </div>
 
 
+    <div class="location mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mt-5">
+                        <img src="assets/images/logo.png" class="ser-img" alt="">
+                </div>
+                <div class="col-md-6 mt-5" style="height: 681px;">
+                    <div class="content h-100" >
+                            <img src="assets/images/09.jpg" class="w-100 h-100"  alt="">
+                    <div class="overlay">
+                        <p>hello</p>
+                    </div>
+                <!-- <div class="location-img h-100"> -->
+                <!-- </div> -->
+            </div>
+                
+                </div>
+                <div class="col-md-6 mt-5" style="margin-left: -2%;">
+                        <iframe aria-hidden="true" frameborder="0" tabindex="-1" class="h-100" 
+                         style="width: 100%; height: 100%; top: 0px; left: 0px; border: none;"
+                         src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3456.6419301838555!2d30.923223!3d29.9609765!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1573909576260!5m2!1sar!2seg"
+                         >
+                              
+                           
+                        </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+<!-- 
+    <popover-content #myPopover 
+                title="Popover title" 
+                placement="left"
+                [animation]="true" 
+                [closeOnClickOutside]="true" >
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
+    <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
+</popover-content> -->
+ 
+<!-- <button [popover]="myPopover">element on which this popover is applied.</button> -->
