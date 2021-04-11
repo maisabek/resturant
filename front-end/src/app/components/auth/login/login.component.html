@@ -10,14 +10,20 @@
                 </mat-form-field>
                 <br>
                 <mat-form-field>
+                    <div class="d-flex">
+                        <div>
                         <mat-label>password</mat-label>
                       <input [type]="showPass? 'password':'text'"  matInput formControlName="password" #password>
-                        <button (click)="showPass != showPass" mat-icon-button type="button">
+                    </div>
+                    <div>
+                      <button (click)="showPass = !showPass" mat-icon-button type="button" class="pass-btn">
                       <mat-icon>{{showPass ? 'visibility_off':'visibility'}}</mat-icon>
                     </button>
+                </div>
+                </div>
                     </mat-form-field>
                       <br>
-                      <button (click)="onSignIn(email.value,password.value)" class="mt-4">Login</button>
+                      <button (click)="onSignIn(email.value,password.value)" class="btn-login mt-4">Login</button>
           </form>
         </div>
         </div>

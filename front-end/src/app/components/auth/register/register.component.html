@@ -26,12 +26,15 @@
                         This filed is required
                     </div>
 
-                    <div class="input-group">
+                    <div class="input-group d-flex w-100">
+                        <div style="width: 30%;">
                         <input formControlName='password' class="input--style-2" [type]="showPass ? 'password':'text' " placeholder="password" #password>
-                        <button (click)="showPass != showPass" mat-icon-button type="button">
+                        </div>
+                        <div style="width: 70%;">
+                        <button (click)="showPass = !showPass" mat-icon-button type="button" style="margin: 0 84%;">
                             <mat-icon>{{showPass ? 'visibility_off':'visibility'}}</mat-icon>
                         </button>
-
+                    </div>
                     </div>
 
                     <div *ngIf='register.get("password").invalid && register.get("password").touched

@@ -21,18 +21,17 @@
                     <div class="col-md-9 col-7">
                         <div class="w-100">
                         <ul>
-                           
-                            <li style="margin-left:24%;"><a [matMenuTriggerFor]="menu">
-                                <i class="fa fa-align-left" style="font-size:22px" aria-hidden="true"></i>
-                            </a></li>
-                            <li style="margin-top: -1%;">
+                            <li class="cart-li">
                                     <a>
-                                        <button mat-icon-button (click)="sidenav.toggle()"
-                                            style="outline:none;margin: -5% 0px;">
-                                            <i class="fa fa-cart-plus" style="font-size:25px"  aria-hidden="true"></i>
-                                        </button>
+                                        <!-- <button mat-icon-button (click)="sidenav.toggle()"
+                                            style="outline:none;margin: -5% 0px;"> -->
+                                            <i class="fa fa-cart-plus" style="font-size:22px"  aria-hidden="true" (click)="sidenav.toggle()"></i>
+                                        <!-- </button> -->
                                     </a>
                                 </li>
+                                <li style="margin-left:4%;"><a [matMenuTriggerFor]="menu">
+                                    <i i class="fa fa-ellipsis-v" aria-hidden="true" style="font-size:22px"></i>
+                                </a></li>
                             <div class="clearfix"></div>
                             <mat-menu #menu="matMenu">
                                 <a mat-menu-item>Home</a>

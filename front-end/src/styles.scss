@@ -15,3 +15,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-form-field-appearance-legacy .mat-form-field-underline {
     background-color: #9C7C57 !important; 
 }
+.mat-menu-panel {
+    background: #022629 !important;
+    min-width: 190px !important;
+    margin: 6px -42%;
+    a{
+    color:white !important;
+    }
+}
+.mat-menu-item {
+    padding:0px 73px !important;
+}

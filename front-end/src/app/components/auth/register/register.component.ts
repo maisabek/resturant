@@ -36,6 +36,7 @@ async onSignIn(email:string,password:string){
  if(this.auth.isLoggedIn)
    this.isSignedIn=true
 }
-showPass:boolean=false
+
+showPass:boolean=true
 
 }

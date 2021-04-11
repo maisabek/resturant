@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   formBuild:FormGroup
-  showPass:boolean=false
+  showPass:boolean=true
   constructor(private fb:FormBuilder,public auth:AuthService) { }
   ngOnInit(): void {
     this.formBuild=this.fb.group({
@@ -17,11 +17,11 @@ export class LoginComponent implements OnInit {
         password:''
     })
 
-    // if(localStorage.getItem('user') !== null){
-    //   this.isSignedIn=true
-    // }else{
-    //   this.isSignedIn=false
-    // }
+    if(localStorage.getItem('user') !== null){
+      this.isSignedIn=true
+    }else{
+      this.isSignedIn=false
+    }
   }
   isSignedIn=false
   async onSignIn(email:string,password:string){
