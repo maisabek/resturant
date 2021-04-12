@@ -9,7 +9,7 @@ export class authInterceptor implements HttpInterceptor{
         const authService=this.inject.get(AuthService)
         const modifedUrl=req.clone({
                 setHeaders:{
-                    Authorization:`Breare ${authService.getToken()}`
+                    Authorization:`Bearer ${authService.getToken()}`
                 }
             }
         )

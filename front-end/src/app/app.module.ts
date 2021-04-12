@@ -28,6 +28,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database'
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {PopoverModule} from "ngx-smart-popover";
 import { interceptors } from './services/index';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { interceptors } from './services/index';
     }),
     AngularFireDatabaseModule,
     CarouselModule,
-    PopoverModule
+    PopoverModule,
+    HttpClientModule
    ],
   providers: [interceptors],
   bootstrap: [AppComponent]

@@ -25,9 +25,9 @@ export class LoginComponent implements OnInit {
   }
   isSignedIn=false
   async onSignIn(email:string,password:string){
-   await this.auth.signin(email,password)
-   if(this.auth.isLoggedIn)
-     this.isSignedIn=true
+  //  await this.auth.signin(email,password)
+  //  if(this.auth.isLoggedIn)
+  //    this.isSignedIn=true
   }
 
 
