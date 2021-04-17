@@ -10,23 +10,15 @@ import { Observable } from 'rxjs';
 export class AuthService {
   isLoggedIn=false
   constructor(public firebaseAuth:AngularFireAuth,private http:HttpClient) { }
-  // async signin(email:string,password:string){
-  //  await this.firebaseAuth.signInWithEmailAndPassword(email,password).then(res =>{
-  //    this.isLoggedIn=true
-  //    localStorage.setItem('user',JSON.stringify(res.user))
-  //   })
-  // }
-
-  // async signup(email:string,password:string){
-  //  await this.firebaseAuth.createUserWithEmailAndPassword(email,password).then(res=>{
-  //    this.isLoggedIn=true
-  //    localStorage.setItem('user',JSON.stringify(res.user))
-  //  })
-  // }
+  
    registerUrl=`http://localhost:3000/resturant/register`
   register(data:any):Observable<any>{
     return this.http.post<any>(this.registerUrl,data)
   }
+  login():Observable<any>{
+   return this.http.get(this.registerUrl)
+  }
+  
   logout(){
     localStorage.removeItem("token")
   }

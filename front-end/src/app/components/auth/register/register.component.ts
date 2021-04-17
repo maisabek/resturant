@@ -8,20 +8,11 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
-
- 
-
-
+export class RegisterComponent implements OnInit{
   constructor(private fb: FormBuilder,public auth:AuthService,private router:Router) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('user') !== null){
-      this.isSignedIn=true
-    }else{
-      this.isSignedIn=false
-    }
-
+  
     console.log("this.registerForm.value : ",this.registerForm.value)
  }
 
@@ -33,13 +24,12 @@ export class RegisterComponent implements OnInit {
 });
 
 
-isSignedIn=false
  registerFn(){
   this.auth.register(this.registerForm.value).subscribe((res)=>{
 
-    // localStorage.setItem("token", res.token);
-    console.log("success",this.registerForm.value,"token",res.token)
-    this.router.navigate([`/home`])
+    localStorage.setItem("token", res.token);
+    console.log("success",res)
+    this.router.navigate(['/menu'])
     
   })
 }

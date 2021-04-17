@@ -4,7 +4,7 @@
             <div class="card-heading"></div>
             <div class="card-body">
                 <h2 class="title">Registration Info</h2>
-                <form [formGroup]='registerForm'>
+                <form [formGroup]='registerForm' (ngSubmit)="registerFn()">
 
                     <div class="input-group">
                         <input formControlName='name' class="input--style-2" type="text" placeholder="Name" #fname>
@@ -57,8 +57,8 @@
                     </div> -->
 
                     <div class="p-t-30">
-                        <button class="btn btn--radius btn--green"
-                            [disabled]="!registerForm.valid" (click)="registerFn()">Register</button>
+                        <button class="btn btn--radius btn--green" type="submit"
+                            [disabled]="!registerForm.valid">Register</button>
                     </div>
                 </form>
             </div>
