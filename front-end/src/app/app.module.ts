@@ -22,13 +22,12 @@ import { FeedbacksComponent } from './components/feedbacks/feedbacks.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgwWowModule } from 'ngx-wow';
 import {NgxTypedJsModule} from 'ngx-typed-js';
-import { AngularFireModule } from '@angular/fire';
-import { environment } from 'src/environments/environment';
-import {AngularFireDatabaseModule} from '@angular/fire/database'
+
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {PopoverModule} from "ngx-smart-popover";
 import { interceptors } from './services/index';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -58,20 +57,10 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     NgwWowModule,
     NgxTypedJsModule,
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyBzgXvmC3K78ILaOJ-MoFNZT74CIjFxWTA",
-      authDomain: "main-res.firebaseapp.com",
-      databaseURL: "https://main-res-default-rtdb.firebaseio.com",
-      projectId: "main-res",
-      storageBucket: "main-res.appspot.com",
-      messagingSenderId: "819703357002",
-      appId: "1:819703357002:web:f675c3d3dfeea589ee50b3",
-      measurementId: "G-J26TBVWZL0"
-    }),
-    AngularFireDatabaseModule,
     CarouselModule,
     PopoverModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
    ],
   providers: [interceptors],
   bootstrap: [AppComponent]

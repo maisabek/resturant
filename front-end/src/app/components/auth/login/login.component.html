@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-5 mt-5 mb-5">
             <div class="form-container">
-          <form [formGroup]="formBuild">
+          <form [formGroup]="formBuild" (ngSubmit)="login()">
               <mat-form-field>
                   <mat-label>Email</mat-label>
                 <input type="email" matInput formControlName="email" #email>
@@ -23,7 +23,7 @@
                 </div>
                     </mat-form-field>
                       <br>
-                      <button (click)="onSignIn(email.value,password.value)" class="btn-login mt-4">Login</button>
+                      <button type="submit" class="btn-login mt-4">Login</button>
           </form>
         </div>
         </div>

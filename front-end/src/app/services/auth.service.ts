@@ -8,15 +8,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  isLoggedIn=false
-  constructor(public firebaseAuth:AngularFireAuth,private http:HttpClient) { }
+  constructor(private http:HttpClient) { }
   
    registerUrl=`http://localhost:3000/resturant/register`
+   loginUrl=`http://localhost:3000/resturant/login`
+   username:any
   register(data:any):Observable<any>{
     return this.http.post<any>(this.registerUrl,data)
   }
-  login():Observable<any>{
-   return this.http.get(this.registerUrl)
+  login(data:any):Observable<any>{
+   return this.http.post(this.loginUrl,data)
   }
   
   logout(){
@@ -24,5 +25,8 @@ export class AuthService {
   }
   getToken(){
     localStorage.getItem('token')
+  }
+  isLogin(){
+    return !!localStorage.getItem('token')
   }
 }

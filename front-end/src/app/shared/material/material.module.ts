@@ -17,6 +17,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {CdkTableModule} from '@angular/cdk/table';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select'
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 const materialComponents=[
   MatButtonModule,
   MatToolbarModule,
@@ -34,7 +36,8 @@ const materialComponents=[
   MatSortModule,
   CdkTableModule,
   MatAutocompleteModule,
-  MatSelectModule
+  MatSelectModule,
+  MatSlideToggleModule
 ]
 @NgModule({
   declarations: [],

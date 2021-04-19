@@ -1,10 +1,19 @@
 <div class="page-wrapper bg-black p-t-180 p-b-100 font-robo">
     <div class="wrapper wrapper--w960">
         <div class="card card-2">
-            <div class="card-heading"></div>
+            <div class="card-heading">
+            </div>
             <div class="card-body">
+
+                <div class="row mb-5 font-robo">
+                    
+                    <div class="col-md-6 ml-5" style="margin: 0 25%;">
+                        Resturant  <mat-slide-toggle style="margin: 0 2%;">User</mat-slide-toggle>
+                    </div>
+                </div>
                 <h2 class="title">Registration Info</h2>
-                <form [formGroup]='registerForm' (ngSubmit)="registerFn()">
+                     <span class="alert alert-danger" style="font-size: 11px;">*All Fields Required</span>
+                <form [formGroup]='registerForm' class="mt-4">
 
                     <div class="input-group">
                         <input formControlName='name' class="input--style-2" type="text" placeholder="Name" #fname>
@@ -12,7 +21,7 @@
                     </div>
 
                     <div *ngIf='registerForm.get("name").invalid && registerForm.get("name").touched
-                    && registerForm.get("name").dirty ' class="alert alert-danger" role="alert">
+                    ' class="alert alert-danger" role="alert">
                         This filed is required
                     </div>
       
@@ -21,10 +30,10 @@
 
                     </div>
 
-                    <div *ngIf='registerForm.get("email").invalid && registerForm.get("email").touched
-                    && registerForm.get("email").dirty ' class="alert alert-danger" role="alert">
-                        This filed is required
-                    </div>
+                    <span *ngIf='registerForm.get("email").invalid && registerForm.get("email").touched' class="alert alert-danger" role="alert">
+                        <span *ngIf="registerForm.get('email').errors.email">Email Formate Error</span>
+                        <span *ngIf="registerForm.get('email').errors.pattern"> . Email Must End With .com</span>
+                </span>
 
                     <div class="input-group d-flex w-100">
                         <div style="width: 30%;">
@@ -37,10 +46,11 @@
                     </div>
                     </div>
 
-                    <div *ngIf='registerForm.get("password").invalid && registerForm.get("password").touched
-                    && registerForm.get("password").dirty ' class="alert alert-danger" role="alert">
-                        This filed is required
-                    </div>
+                    <span *ngIf='registerForm.get("password").invalid && registerForm.get("password").touched
+                     ' class="alert alert-danger" role="alert">
+                     must contain at least 7 character
+                    <span *ngIf="registerForm.get('password').errors.minLength">password must contain at least 7 character</span>
+                </span>
 
                     <!-- <div class="input-group">
                         <input formControlName='phone' class="input--style-2" type="text" placeholder="Phone" #phone>
@@ -57,9 +67,13 @@
                     </div> -->
 
                     <div class="p-t-30">
-                        <button class="btn btn--radius btn--green" type="submit"
-                            [disabled]="!registerForm.valid">Register</button>
+                        <button class="btn btn--radius btn--green" type="button"
+                            [disabled]="!registerForm.valid" (click)=" registerFn()">Register</button>
                     </div>
+                    <ng-template #myTemplate>
+                       <h5 style="color: rgb(9, 49, 49);">Data Add Successfully</h5>
+                       <button style="border: 1px solid rgb(9, 49, 49);;" (click)="hideModal()">Ok</button>
+                    </ng-template>
                 </form>
             </div>
         </div>

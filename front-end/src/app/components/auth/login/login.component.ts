@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
-
+import {Router} from '@angular/router'
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,24 +11,26 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
   formBuild:FormGroup
   showPass:boolean=true
-  constructor(private fb:FormBuilder,public auth:AuthService) { }
+  constructor(private fb:FormBuilder,public auth:AuthService,
+    private router:Router,private snackBar:MatSnackBar) { }
   ngOnInit(): void {
     this.formBuild=this.fb.group({
         email:'',
         password:''
     })
 
-    if(localStorage.getItem('user') !== null){
-      this.isSignedIn=true
-    }else{
-      this.isSignedIn=false
-    }
   }
-  isSignedIn=false
-  async onSignIn(email:string,password:string){
-  //  await this.auth.signin(email,password)
-  //  if(this.auth.isLoggedIn)
-  //    this.isSignedIn=true
+  login(){
+    this.auth.login(this.formBuild.value).subscribe((res)=>{
+      localStorage.setItem("token",res.token)
+      this.auth.username=res.name   
+       this.router.navigate(['/menu'])
+    },error =>{
+      this.openSnackBar("Either Email or Password are incorrect","Try Again")
+    })
+  }
+  openSnackBar(message:string,action:string){
+    this.snackBar.open(message,action)
   }
 
 
