@@ -33,7 +33,7 @@
             <div class="col-md-1 col-2">
                 <img src="assets/images/logo2.png" class="w-100">
             </div>
-            <div class="col-md-11 col-10">
+            <div class="col-md-8 col-6">
                     <ul>
                             <li>
                                 <a>
@@ -63,8 +63,25 @@
                             <div class="clearfix"></div>
                 
                 
-                        </ul>
+                        </ul>           
             </div>
+            
         </div>
     </div>
 </div>
+
+<div class="scroll">
+    <i class="fa fa-comment" aria-hidden="true" (click)="openDailog(feedBackRef)"></i>
+</div>
+
+<ng-template #feedBackRef>
+       <div class="feedBack">
+       <h3 class="mt-5 ml-5">Enter Your FeedBack</h3>
+    <mat-form-field apperance="full" class="mt-5 mb-5">
+       <mat-label>Enter Your FeedBack</mat-label>
+       <input type="text" matInput>
+   </mat-form-field>
+   <br>
+   <button style="border-radius: 5px;width: 90%;">Send FeedBack</button>
+</div>
+</ng-template>

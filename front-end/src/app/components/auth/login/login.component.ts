@@ -23,7 +23,11 @@ export class LoginComponent implements OnInit {
   login(){
     this.auth.login(this.formBuild.value).subscribe((res)=>{
       localStorage.setItem("token",res.token)
-      this.auth.username=res.name   
+      this.auth.getCurrentUser().subscribe((current)=>{
+        console.log("current",current)
+        // this.auth.username=current.name
+        // console.log("this.auth.username",this.auth.username,"current.name",current.name)
+      })
        this.router.navigate(['/menu'])
     },error =>{
       this.openSnackBar("Either Email or Password are incorrect","Try Again")

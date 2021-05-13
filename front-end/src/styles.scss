@@ -5,7 +5,9 @@
 
 html, body { height: 100%;background: rgb(1, 16, 17); }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+.popover {  
+    max-width: 600px  !important;
+}
 .mat-form-field-ripple {
     background-color: white !important;
 }
@@ -43,3 +45,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 36%;
     padding: 29px  !important;
 }
+
+    .cdk-overlay-pane{
+        // left: 49%;
+        // top: 77%;
+        // position: absolute !important;
+        // width: 38%;
+        // height: 50%;
+    
+}  

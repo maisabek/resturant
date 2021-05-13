@@ -123,7 +123,19 @@ img{
 .location .content:hover .overlay{
     right:0
     }
-
+    .btn{
+        border:none;
+        outline: none;
+        background:rgb(9, 41, 41) ;
+        color: white;
+        margin: 5% 0%;
+        width: 100%;
+    }
+    popover-content{
+        width: 40%;
+        height: 300px;
+    }
+   
 @keyframes translateHeader{
     0%{
         transform:  scale(1.1);

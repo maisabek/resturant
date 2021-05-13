@@ -30,9 +30,7 @@ export class RegisterComponent implements OnInit{
   this.auth.register(this.registerForm.value).subscribe((res)=>{
 
     localStorage.setItem("token", res.token);
-     this.auth.username=res.name   
-     console.log("this.auth.username",res.email) 
-    //  this.openModal(this.myTemplate)
+     this.auth.username=res.resturant.name   
     this.openSnackBar("data added successfully","ok")
     this.router.navigate(['/menu'])
     

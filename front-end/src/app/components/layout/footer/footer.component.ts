@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, TemplateRef } from '@angular/core';
+// import {MatDailog} from '@angular/material/dailog'
+import {MatDialog} from '@angular/material/dialog'
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matDialog:MatDialog) { }
 
   ngOnInit(): void {
+  }
+  openDailog(templateRef:TemplateRef<any>){
+    this.matDialog.open(templateRef)
   }
 
 }

@@ -1,5 +1,5 @@
 <!-- start header -->
-<div class="header">
+<div class="header" ngx-parallax [active]="false">
         <!-- <app-navbar></app-navbar> -->
     <div class="container">
         <div class="row">
@@ -61,79 +61,89 @@
             </div></div>
 <owl-carousel-o [options]="customOptions">
   <ng-template carouselSlide>
-      <div class="h-100" [popover]="myPopover">
+      <div class="h-100" (click)="openDialog(food12)" style="cursor: pointer;">
      <img src="assets/images/30.jpg" class="w-100" style="height:242px" alt="">
     </div>
-
+<!-- 
      <popover-content #myPopover 
                 title="drink" 
                 placement="left"
                 [animation]="true" 
                  >
-    <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+    <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span> -->
+<!-- </popover-content> -->
 
 
   </ng-template>  
   <ng-template carouselSlide class="h-50">
-    <div class="h-100" [popover]="myPopover">
-    <img src="assets/images/03.jpg" class="w-100" style="height:242px" alt="">
+    <div class="h-100" (click)="openDialog(food11)" style="cursor: pointer;">
+    <img src="assets/images/34.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <popover-content #myPopover 
+    <!-- <popover-content #myPopover 
     title="drink" 
     placement="left"
     [animation]="true" 
      >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+</popover-content> -->
   </ng-template>  
   <ng-template carouselSlide class="h-50">
-    <div class="h-100" [popover]="myPopover">
-    <img src="assets/images/24.webp" class="w-100" style="height:242px" alt="">
+    <div class="h-100" (click)="openDialog(food10)" style="cursor: pointer;">
+    <img src="assets/images/31.jpg" class="w-100" style="height:242px" alt="">
      </div>
-     <popover-content #myPopover 
+     <!-- <popover-content #myPopover 
      title="drink" 
      placement="left"
      [animation]="true" 
       >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
   </ng-template> 
   <ng-template carouselSlide class="h-50">
-    <div class="h-100" [popover]="myPopover">
-    <img src="assets/images/03.jpg" class="w-100" style="height:242px" alt="">
+    <div class="h-100" (click)="openDialog(food9)" style="cursor: pointer;">
+    <img src="assets/images/27.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <popover-content #myPopover 
+    <!-- <popover-content #myPopover 
     title="drink" 
     placement="left"
     [animation]="true" 
      >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+
+</popover-content> -->
  </ng-template>  
  <ng-template carouselSlide class="h-50">
-    <div class="h-100" [popover]="myPopover">
-   <img src="assets/images/27.jpg" class="w-100" style="height:242px" alt="">
+    <div class="h-100" (click)="openDialog(food8)" style="cursor: pointer;">
+   <img src="assets/images/12.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <popover-content #myPopover 
+    <!-- <popover-content #myPopover 
     title="drink" 
     placement="left"
     [animation]="true" 
      >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+
+</popover-content> -->
  </ng-template>  
  <ng-template carouselSlide class="h-100">
-    <div class="h-50" [popover]="myPopover">
-   <img src="assets/images/head.jpg" class="w-100" style="height:242px" alt="">
+    <div class="h-50" (click)="openDialog(food7)" style="cursor: pointer;">
+   <img src="assets/images/40.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <popover-content #myPopover 
+    <!-- <popover-content #myPopover 
     title="drink" 
     placement="left"
     [animation]="true" 
      >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
  </ng-template> 
 </owl-carousel-o>
 
@@ -143,80 +153,179 @@
 <div>
     <owl-carousel-o [options]="customOptions2">
       <ng-template carouselSlide>
-          <div class="h-100" [popover]="myPopover">
-         <img src="assets/images/23.jpg" class="w-100" style="height:242px" alt="">
+          <div class="h-100" (click)="openDialog(food6)" style="cursor: pointer;">
+         <img src="assets/images/41.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <popover-content #myPopover 
+        <!-- <popover-content #myPopover 
+        title="drink" 
+        placement="right"
+        [animation]="false">
+<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
+      </ng-template>  
+      <ng-template carouselSlide class="h-50">
+        <div class="h-100" (click)="openDialog(food5)" style="cursor: pointer;">
+        <img src="assets/images/39.jpg" class="w-100" style="height:242px" alt="">
+        </div>
+        <!-- <popover-content #myPopover 
         title="drink" 
         placement="right"
         [animation]="true" 
          >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
       </ng-template>  
       <ng-template carouselSlide class="h-50">
-        <div class="h-100" [popover]="myPopover">
-        <img src="assets/images/04.jpg" class="w-100" style="height:242px" alt="">
-        </div>
-        <popover-content #myPopover 
-        title="drink" 
-        placement="right"
-        [animation]="true" 
-         >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
-      </ng-template>  
-      <ng-template carouselSlide class="h-50">
-        <div class="h-100" [popover]="myPopover">
-        <img src="assets/images/16.jpg" class="w-100" style="height:242px" alt="">
+        <div class="h-100" (click)="openDialog(food4)" style="cursor: pointer;">
+        <img src="assets/images/35.jpg" class="w-100" style="height:242px" alt="">
          </div>
-         <popover-content #myPopover 
+         <!-- <popover-content #myPopover 
          title="drink" 
          placement="right"
          [animation]="true" 
           >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
       </ng-template> 
       <ng-template carouselSlide class="h-50">
-        <div class="h-100" [popover]="myPopover">
-        <img src="assets/images/25.jpg" class="w-100" style="height:242px" alt="">
+        <div class="h-100" (click)="openDialog(food3)" style="cursor: pointer;">
+        <img src="assets/images/23.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <popover-content #myPopover 
+        <!-- <popover-content #myPopover 
         title="drink" 
         placement="right"
         [animation]="true" 
          >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
      </ng-template>  
      <ng-template carouselSlide class="h-50">
-        <div class="h-100" [popover]="myPopover">
-       <img src="assets/images/22.jpg" class="w-100" style="height:242px" alt="">
+        <div class="h-100" (click)="openDialog(food2)" style="cursor: pointer;">
+       <img src="assets/images/38.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <popover-content #myPopover 
+        <!-- <popover-content #myPopover 
         title="drink" 
         placement="right"
         [animation]="true" 
          >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
      </ng-template>  
      <ng-template carouselSlide class="h-100">
-        <div class="h-50" [popover]="myPopover">
-       <img src="assets/images/19.jpg" class="w-100" style="height:242px" alt="">
+        <div class="h-50"  (click)="openDialog(food1)" style="cursor: pointer;">
+       <img src="assets/images/37.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <popover-content #myPopover 
+        <!-- <popover-content #myPopover 
         title="drink" 
         placement="right"
         [animation]="true" 
          >
 <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content>
+<br>
+<button class="btn">Add To Cart</button>
+</popover-content> -->
      </ng-template> 
     </owl-carousel-o>
     
     </div>
+    <ng-template #food1>
+        <img src="assets/images/37.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+
+    <ng-template #food2>
+        <img src="assets/images/38.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+
+    <ng-template #food3>
+        <img src="assets/images/23.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+
+    <ng-template #food4>
+        <img src="assets/images/35.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+    <ng-template #food5>
+        <img src="assets/images/39.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+    <ng-template #food6>
+        <img src="assets/images/41.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+    <ng-template #food7>
+        <img src="assets/images/40.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+    <ng-template #food8>
+        <img src="assets/images/12.jpg" class="w-100" style="width:10%;height: 370px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+
+    <ng-template #food9>
+        <img src="assets/images/27.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+    <ng-template #food10>
+        <img src="assets/images/31.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+    <ng-template #food11>
+        <img src="assets/images/34.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
+    <ng-template #food12>
+        <img src="assets/images/30.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <br>
+        <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
+        <br>
+        <button class="btn">Add To Cart</button>
+    </ng-template>
 
 
     <div class="location mt-5">

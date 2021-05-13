@@ -28,6 +28,8 @@ import {PopoverModule} from "ngx-smart-popover";
 import { interceptors } from './services/index';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
+import { NgxParallaxModule } from '@yoozly/ngx-parallax';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     CarouselModule,
     PopoverModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ParallaxModule,
+    NgxParallaxModule
    ],
   providers: [interceptors],
   bootstrap: [AppComponent]

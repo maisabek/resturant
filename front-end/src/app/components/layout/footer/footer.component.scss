@@ -45,7 +45,61 @@
         }
         a{color: white}
     }
+    .fa-comment{
+    background: white;
+    padding: 5px;
+    /* width: 37px; */
+    color: rgb(7, 41, 41);
+    position: sticky;
+    /* text-align: center; */
+    margin: 0 52%;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    }
 }
+h5{
+    color: rgb(7, 41, 41);
+}
+button{
+    background: rgb(7, 41, 41);
+    color: white;
+    border: none;
+    outline: none;
+    padding:8px;
+}
+.feedBack{
+    padding: 79px
+}
+.feedBack:after{
+    content: "";
+    position: absolute;
+    bottom: 129px;
+    right: 34.2rem;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 36px solid #fff;
+    border-bottom: 25px solid transparent;
+
+}
+.scroll{
+    position: relative;
+    .fa-comment{
+        position:fixed;
+        bottom: 23px;
+        right: 26px;
+        background: white;
+        padding: 5px;
+        color: rgb(7, 41, 41);
+        border-radius: 5px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index:22222222222
+    }
+}
+
 
 @media (max-width: 767px ){/* mobile & tablet*/
     .footer1 .content .subscribe{

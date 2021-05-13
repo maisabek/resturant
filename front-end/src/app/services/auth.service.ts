@@ -12,6 +12,7 @@ export class AuthService {
   
    registerUrl=`http://localhost:3000/resturant/register`
    loginUrl=`http://localhost:3000/resturant/login`
+   currentUserUrl=`http://localhost:3000/resturant/me`
    username:any
   register(data:any):Observable<any>{
     return this.http.post<any>(this.registerUrl,data)
@@ -19,7 +20,9 @@ export class AuthService {
   login(data:any):Observable<any>{
    return this.http.post(this.loginUrl,data)
   }
-  
+  getCurrentUser():Observable<any>{
+   return this.http.get(`${this.currentUserUrl}`)
+  }
   logout(){
     localStorage.removeItem("token")
   }
