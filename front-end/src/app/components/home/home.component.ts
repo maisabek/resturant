@@ -19,12 +19,10 @@ export class HomeComponent implements OnInit {
     this.DialogRef.open(templateRef)
   }
   innerPages:any[]=[
-    {pagename:"resturant",img:"assets/images/drinks.jpg",title:"our resturant"},
-    {pagename:"foods",img:"assets/images/foods.jpg",title:"our foods"},
     {pagename:"menu",img:"assets/images/Landing-inner-img.jpg",title:"our menu"},
-    // {pagename:"chefs",img:"assets/images/chefs.jpg",title:"our chefs"},
-    // {pagename:"drinks",img:"assets/images/drinks.jpg",title:"our drinks"},
-    // {pagename:"feedbacks",img:"assets/images/07.jpg",title:"our feedbacks"}, 
+    {pagename:"foods",img:"assets/images/foods.jpg",title:"our foods"},
+    {pagename:"resturant",img:"assets/images/drinks.jpg",title:"our resturant"},
+  
   ]
   customOptions: OwlOptions = {
     loop: true,

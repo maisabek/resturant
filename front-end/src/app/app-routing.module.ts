@@ -12,6 +12,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { ResourceNotFoundComponent } from './shared/resource-not-found/resource-not-found.component';
 import { ApplicationErrorComponent } from './shared/application-error/application-error.component';
+import { ResturantDetailsComponent } from './components/resturant-details/resturant-details.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'menu',component:MenuComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'chefs',component:ChefsComponent},
   {path:'feedbacks',component:FeedbacksComponent},
   {path:'resturant',component:ResturantsComponent},
+  {path:'resturant/:id',component:ResturantDetailsComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'pageNotFound',component:PageNotFoundComponent},

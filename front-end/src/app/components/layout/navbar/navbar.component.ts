@@ -1,5 +1,6 @@
 import { Component, OnInit,HostListener } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { LoadingScreenService } from 'src/app/services/loading-screen/loading-screen.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavbarComponent implements OnInit {
   isSignedIn=false
-  constructor(public authService:AuthService) { }
+  constructor(public authService:AuthService,public loaderService:LoadingScreenService) { }
 
   ngOnInit(): void {
     if(localStorage.getItem('user') !== null){
@@ -17,6 +18,9 @@ export class NavbarComponent implements OnInit {
       this.isSignedIn=false
     }
   }
+  onActivate(event) {
+    window.scroll(0,0);
+}
 
   logout(){
     this.authService.logout()

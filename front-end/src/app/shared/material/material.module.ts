@@ -18,6 +18,9 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select'
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatProgressBarModule} from '@angular/material/progress-bar'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import {MatTabsModule} from '@angular/material/tabs'
 
 const materialComponents=[
   MatButtonModule,
@@ -37,7 +40,10 @@ const materialComponents=[
   CdkTableModule,
   MatAutocompleteModule,
   MatSelectModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatTabsModule
 ]
 @NgModule({
   declarations: [],

@@ -1,1 +1,26 @@
-<p>resturants works!</p>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+            <h5 style="font-family: cursive;color: #9C7C57;font-size: 20px;">Check Out</h5>
+            <p style="font-size: 25px;">Our Resturants</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of resturants">
+            <a routerLink="/resturant/{{item.id}}">
+            <div class="w-100" style="height: 270px;">
+                <img [src]="item.image" class="w-100 h-100" alt="">
+            </div>
+              <h5 style="color:white">{{item.Title}}</h5>
+            </a>
+        </div>
+    </div>
+</div>
+
+    </div>

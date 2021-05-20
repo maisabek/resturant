@@ -4,6 +4,9 @@
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 html, body { height: 100%;background: rgb(1, 16, 17); }
+html{
+    scroll-behavior: smooth;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .popover {  
     max-width: 600px  !important;
@@ -46,11 +49,39 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding: 29px  !important;
 }
 
-    .cdk-overlay-pane{
+    // .cdk-overlay-pane{
         // left: 49%;
         // top: 77%;
         // position: absolute !important;
         // width: 38%;
         // height: 50%;
     
-}  
+// }  
+.mat-tab-label .mat-tab-label-content{
+color: #9C7C57 !important;
+}
+.mat-tab-label {
+background: black !important;
+margin-left: 5px !important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+background-color: transparent !important;
+}
+.mat-tab-body-content {
+overflow: hidden !important;
+}
+.mat-tab-list {
+    margin-left: 20% !important;
+    margin-bottom: 2%;
+}
+.mat-tab-body-content {
+   background: black !important;
+    margin-left: 5% !important;
+    overflow:  hidden !important;
+    padding: 30px !important;
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+background: white !important;
+}

@@ -30,6 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
 import { NgxParallaxModule } from '@yoozly/ngx-parallax';
+import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
+import { ResturantDetailsComponent } from './components/resturant-details/resturant-details.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { NgxParallaxModule } from '@yoozly/ngx-parallax';
     DrinksComponent,
     ChefsComponent,
     ResturantsComponent,
-    FeedbacksComponent
+    FeedbacksComponent,
+    LoadingScreenComponent,
+    ResturantDetailsComponent
   ],
   imports: [
     BrowserModule,

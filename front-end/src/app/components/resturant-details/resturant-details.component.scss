@@ -9,6 +9,7 @@
     color: white;
     }
 }
+
 .hidden-list{
     display: none;
     margin: -49px -73%;
@@ -51,10 +52,7 @@ img:hover{
 .hidden-list2{
     margin: -49px 70%;
 }
-.ser-img{
-    margin-left: 42%;margin-top: 12px
-}
-p{font-family: cursive;}
+
 @media (max-width: 767px ){/* mobile & tablet*/
     .hidden-list,.hidden-list2 {
         margin: -337px -2%;

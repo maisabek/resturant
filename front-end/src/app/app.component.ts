@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingScreenService } from './services/loading-screen/loading-screen.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'resturant';
+  constructor(public loaderService:LoadingScreenService){}
 }

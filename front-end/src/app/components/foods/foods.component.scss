@@ -1,3 +1,39 @@
+.header{
+    background: url(../../../assets/images/landing-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .content{
+        text-align: center;
+    margin: 8% 0px;
+    color: white;
+    }
+}
+
 .foods{
-    color:white
+    color:white;
+    button{
+        border: none;
+        outline: none;
+        border: 1px solid #9C7C57; 
+        color: white;
+        width: 50%;
+        // margin: 0 30%;
+        padding: 3px;
+        background: transparent;
+    }
+    .ser-img{
+        margin-left: 42%;margin-top: 12px
+    }
+
+}
+.food-img{
+    overflow: hidden;
+}
+img{
+    transition: all 2s ease-in-out;
+
+}
+img:hover{
+    transform: scale(1.5);
 }

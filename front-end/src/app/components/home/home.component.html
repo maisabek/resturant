@@ -12,7 +12,7 @@
       [shuffle]="true" [loop]="true" [typeSpeed]="100">
          <span class="typing"></span>
       </ngx-typed-js>
-                 <button>Discover More</button>
+                 <!-- <button>Discover More</button> -->
 
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <img src="assets/images/logo.png" class="ser-img" alt="">
             </div>
         <ng-container *ngFor="let item of innerPages">
-        <div class="col-md-4 mt-5 h-75">
+        <div class="col-md-4 h-75">
                 <a routerLink="/{{item.pagename}}">
                     <div class="allcontent">
                     <div class="content h-75">
@@ -58,186 +58,95 @@
                 <h5>some foods in our resturant</h5>
                 <img src="assets/images/logo.png" class="ser-img" alt="">
             </div>
-            </div></div>
+
+      <div class="col-md-12">    
 <owl-carousel-o [options]="customOptions">
   <ng-template carouselSlide>
       <div class="h-100" (click)="openDialog(food12)" style="cursor: pointer;">
-     <img src="assets/images/30.jpg" class="w-100" style="height:242px" alt="">
+     <img src="assets/images/12.jpg" class="w-100" style="height:242px" alt="">
     </div>
-<!-- 
-     <popover-content #myPopover 
-                title="drink" 
-                placement="left"
-                [animation]="true" 
-                 >
-    <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span> -->
-<!-- </popover-content> -->
-
 
   </ng-template>  
   <ng-template carouselSlide class="h-50">
     <div class="h-100" (click)="openDialog(food11)" style="cursor: pointer;">
     <img src="assets/images/34.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <!-- <popover-content #myPopover 
-    title="drink" 
-    placement="left"
-    [animation]="true" 
-     >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-</popover-content> -->
+   
   </ng-template>  
   <ng-template carouselSlide class="h-50">
     <div class="h-100" (click)="openDialog(food10)" style="cursor: pointer;">
     <img src="assets/images/31.jpg" class="w-100" style="height:242px" alt="">
      </div>
-     <!-- <popover-content #myPopover 
-     title="drink" 
-     placement="left"
-     [animation]="true" 
-      >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+    
   </ng-template> 
   <ng-template carouselSlide class="h-50">
     <div class="h-100" (click)="openDialog(food9)" style="cursor: pointer;">
-    <img src="assets/images/27.jpg" class="w-100" style="height:242px" alt="">
+    <img src="assets/images/08.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <!-- <popover-content #myPopover 
-    title="drink" 
-    placement="left"
-    [animation]="true" 
-     >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-
-</popover-content> -->
+   
  </ng-template>  
  <ng-template carouselSlide class="h-50">
     <div class="h-100" (click)="openDialog(food8)" style="cursor: pointer;">
-   <img src="assets/images/12.jpg" class="w-100" style="height:242px" alt="">
+   <img src="assets/images/30.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <!-- <popover-content #myPopover 
-    title="drink" 
-    placement="left"
-    [animation]="true" 
-     >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-
-</popover-content> -->
+    
  </ng-template>  
  <ng-template carouselSlide class="h-100">
     <div class="h-50" (click)="openDialog(food7)" style="cursor: pointer;">
-   <img src="assets/images/40.jpg" class="w-100" style="height:242px" alt="">
+   <img src="assets/images/2.jpg" class="w-100" style="height:242px" alt="">
     </div>
-    <!-- <popover-content #myPopover 
-    title="drink" 
-    placement="left"
-    [animation]="true" 
-     >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+    
  </ng-template> 
 </owl-carousel-o>
-
+</div>  
 </div>
+</div></div>
 
-
-<div>
+<div class="container">
+    <div class="row">
+<div class="col-md-12">
     <owl-carousel-o [options]="customOptions2">
       <ng-template carouselSlide>
           <div class="h-100" (click)="openDialog(food6)" style="cursor: pointer;">
          <img src="assets/images/41.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <!-- <popover-content #myPopover 
-        title="drink" 
-        placement="right"
-        [animation]="false">
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+       
       </ng-template>  
       <ng-template carouselSlide class="h-50">
         <div class="h-100" (click)="openDialog(food5)" style="cursor: pointer;">
-        <img src="assets/images/39.jpg" class="w-100" style="height:242px" alt="">
+        <img src="assets/images/06.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <!-- <popover-content #myPopover 
-        title="drink" 
-        placement="right"
-        [animation]="true" 
-         >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+       
       </ng-template>  
       <ng-template carouselSlide class="h-50">
         <div class="h-100" (click)="openDialog(food4)" style="cursor: pointer;">
         <img src="assets/images/35.jpg" class="w-100" style="height:242px" alt="">
          </div>
-         <!-- <popover-content #myPopover 
-         title="drink" 
-         placement="right"
-         [animation]="true" 
-          >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+        
       </ng-template> 
       <ng-template carouselSlide class="h-50">
         <div class="h-100" (click)="openDialog(food3)" style="cursor: pointer;">
         <img src="assets/images/23.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <!-- <popover-content #myPopover 
-        title="drink" 
-        placement="right"
-        [animation]="true" 
-         >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+      
      </ng-template>  
      <ng-template carouselSlide class="h-50">
         <div class="h-100" (click)="openDialog(food2)" style="cursor: pointer;">
        <img src="assets/images/38.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <!-- <popover-content #myPopover 
-        title="drink" 
-        placement="right"
-        [animation]="true" 
-         >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+        
      </ng-template>  
      <ng-template carouselSlide class="h-100">
         <div class="h-50"  (click)="openDialog(food1)" style="cursor: pointer;">
        <img src="assets/images/37.jpg" class="w-100" style="height:242px" alt="">
         </div>
-        <!-- <popover-content #myPopover 
-        title="drink" 
-        placement="right"
-        [animation]="true" 
-         >
-<b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
-<br>
-<button class="btn">Add To Cart</button>
-</popover-content> -->
+      
      </ng-template> 
     </owl-carousel-o>
     
     </div>
+</div>
+</div>
     <ng-template #food1>
         <img src="assets/images/37.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
         <br>
@@ -270,7 +179,7 @@
         <button class="btn">Add To Cart</button>
     </ng-template>
     <ng-template #food5>
-        <img src="assets/images/39.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <img src="assets/images/06.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
         <br>
         <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
         <br>
@@ -284,14 +193,14 @@
         <button class="btn">Add To Cart</button>
     </ng-template>
     <ng-template #food7>
-        <img src="assets/images/40.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <img src="assets/images/2.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
         <br>
         <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
         <br>
         <button class="btn">Add To Cart</button>
     </ng-template>
     <ng-template #food8>
-        <img src="assets/images/12.jpg" class="w-100" style="width:10%;height: 370px;" alt="">
+        <img src="assets/images/30.jpg" class="w-100" style="width:10%;height: 370px;" alt="">
         <br>
         <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
         <br>
@@ -299,7 +208,7 @@
     </ng-template>
 
     <ng-template #food9>
-        <img src="assets/images/27.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <img src="assets/images/08.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
         <br>
         <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
         <br>
@@ -320,7 +229,7 @@
         <button class="btn">Add To Cart</button>
     </ng-template>
     <ng-template #food12>
-        <img src="assets/images/30.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
+        <img src="assets/images/12.jpg" class="w-100" style="width:30%;height: 300px;" alt="">
         <br>
         <b>there is in </b> <span style="color: #9C7C57; ">resturant A</span>
         <br>
@@ -328,17 +237,45 @@
     </ng-template>
 
 
-    <div class="location mt-5">
+
+    <div style="margin-top: 7%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-md-7 col-lg-4" style="margin-left: 8%;">
+                    <div style="background: white;padding: 60px;font-size: 20px;margin-top: 11%;" class="resturant-content w-100 h-95">
+                   
+                        <p style="text-align: center;color: #9C7C57;margin-top: 1%;font-family: fangsong;">Visit Our</p>
+                    <h5>Resturant</h5>
+                    <p style="color: rgb(100, 99, 99);">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</p>
+                      <a href="" style="color:#9C7C57;margin: 0 20%;">Get Locations</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                   <img src="assets/images/09.jpg" class="w-100 h-100" alt="">
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <img src="assets/images/08.jpg" class="w-100 h-100" alt="">
+                </div>
+               
+            </div>
+
+        </div>
+    </div>
+
+    <div class="location mt-5 mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mt-5">
+                    <h5 style="text-align: center;color: #9C7C57;font-size: 20px;">Our Resturant</h5>
                         <img src="assets/images/logo.png" class="ser-img" alt="">
                 </div>
                 <div class="col-md-6 mt-5" style="height: 681px;">
                     <div class="content h-100" >
                             <img src="assets/images/09.jpg" class="w-100 h-100"  alt="">
                     <div class="overlay">
-                        <p>hello</p>
+                        <p style="color: rgb(235, 233, 233);font-family: cursive; text-align: center;margin-top: 50%;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                        <p style="color: rgb(241, 241, 241);font-family: cursive;text-align: center">Please call us at 1.800.456.6756 between 10am-6pm, Monday to Friday.</p>           
+                    
                     </div>
                 <!-- <div class="location-img h-100"> -->
                 <!-- </div> -->
@@ -358,14 +295,53 @@
         </div>
     </div>
 
-<!-- 
-    <popover-content #myPopover 
-                title="Popover title" 
-                placement="left"
-                [animation]="true" 
-                [closeOnClickOutside]="true" >
-    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
-    <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
-</popover-content> -->
- 
-<!-- <button [popover]="myPopover">element on which this popover is applied.</button> -->
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="cardContainer">
+                        <div class="cover">
+                            <figure class="front">
+                                <!-- <img src="assets/images/44.png" class="w-100 h-25" alt=""> -->
+                                <!-- <div class="w-50" style="margin-top: 47%;margin-left: 27%;height: 90px;"> -->
+                                    <!-- <img src="assets/images/66.png" class="w-100 h-100" alt=""> -->
+                                <!-- </div> -->
+                                <h5 style="font-size: 18px;margin-top: 50%;">our appointements</h5>
+                            </figure>
+                            <figure class="back">
+                             
+
+                            <h5 style="margin: 10% 0;">Lunch Time</h5>
+                            <p style="color: white;text-align: center;font-family: cursive;">Monday to Sunday
+                            </p>
+                            <p style="color: white;font-family: cursive;text-align: center;">10.30am - 3:00pm
+                            </p>
+                            <!-- <img src="assets/images/logo.png" class="ser-img" style="margin: 5% 10%;" alt=""> -->
+                             <h5 style="margin: 17% 0;">Dinner Time</h5>
+                             <p style="color: white;text-align: center;font-family: cursive;">Monday to Sunday
+                            </p>
+                            <p style="color: white;font-family: cursive;text-align: center;">5.30pm - 11:00pm
+                            </p>
+                        </figure>
+                        </div>
+                        <img src="assets/images/qqq.png" class="ser-img" style="margin-top:35%;margin-left: 35%;width: 70px;" alt="">
+                        <h5 style="margin: 3% 0;">Location
+                        </h5>
+                    <p style="color: rgb(112, 112, 112);text-align: center;font-family: cursive;">732/21 Second Street, Manchester Kingston United Kingdom</p>
+                    
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-lg-5 ml-5 mt-5">
+                    <div style="border:1px solid #9C7C57" class="w-100 p-2">
+                        <div style="border:1px solid #9C7C57" class="w-100 p-5">
+                            <h5>Reserve by Phone</h5>
+                            <p style="color: gray;font-family: cursive;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                             <p style="color: gray;font-family: cursive;">Please call us at 1.800.456.6756 between 10am-6pm, Monday to Friday.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
