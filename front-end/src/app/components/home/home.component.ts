@@ -3,6 +3,7 @@ import { NgxTypedJsComponent } from 'ngx-typed-js';
 // import { Typed } from 'typed.js';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import {MatDialog} from '@angular/material/dialog'
+import {NgwWowService} from 'ngx-wow'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,8 +11,13 @@ import {MatDialog} from '@angular/material/dialog'
 })
 export class HomeComponent implements OnInit {
   x:any
-  constructor(private DialogRef:MatDialog) { 
-  }
+  constructor(private DialogRef:MatDialog,private wowService: NgwWowService) { 
+   
+    this.wowService.init(); 
+ 
+
+}
+
 
   ngOnInit(): void {
   }
@@ -19,9 +25,9 @@ export class HomeComponent implements OnInit {
     this.DialogRef.open(templateRef)
   }
   innerPages:any[]=[
-    {pagename:"menu",img:"assets/images/Landing-inner-img.jpg",title:"our menu"},
-    {pagename:"foods",img:"assets/images/foods.jpg",title:"our foods"},
-    {pagename:"resturant",img:"assets/images/drinks.jpg",title:"our resturant"},
+    {pagename:"menu",img:"assets/images/Landing-inner-img.jpg",title:"our menu",style:"wow fadeInLeft"},
+    {pagename:"foods",img:"assets/images/foods.jpg",title:"our foods",style:"wow fadeInDown"},
+    {pagename:"resturant",img:"assets/images/drinks.jpg",title:"our resturant",style:"wow fadeInRight"},
   
   ]
   customOptions: OwlOptions = {

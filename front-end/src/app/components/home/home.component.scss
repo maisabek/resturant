@@ -1,3 +1,4 @@
+// *{overflow-y:hidden}
 .header{
     background: url(../../../assets/images/landing-img.jpg);
     background-repeat: no-repeat;
@@ -160,6 +161,7 @@ img{
     }
 }
 .resturant-content{
+    padding: 30px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     animation: translateUp 5s infinite;
@@ -232,7 +234,17 @@ img{
 @media (max-width: 767px ){/* mobile & tablet*/
 .inner-pages .ser-img{margin-left: 20%;}
 .ser-img{
-    margin-left: 22%;}
+    margin-left: 22%;
+}
+.resturant-content{
+  margin-left: -10%;
+  padding: 30px;
+}
+.cardContainer{
+    width: 188px;
+    margin: 0 47%;
+    height: 287px;
+}
 }
 @media (min-width: 768px) and (max-width:991px){ /* small screen */ 
     .inner-pages .ser-img{margin-left: 34%;}

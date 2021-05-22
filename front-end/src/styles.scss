@@ -2,6 +2,7 @@
 
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "~animate.css/animate.css";
 
 html, body { height: 100%;background: rgb(1, 16, 17); }
 html{
@@ -84,4 +85,14 @@ overflow: hidden !important;
 
 .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
 background: white !important;
+}
+@media (max-width: 767px ){/* mobile & tablet*/
+    .mat-tab-list {
+        margin-left: 0% !important;
+    }
+    .mat-tab-body-content {
+        margin-left: 1% !important;
+        padding: 5px !important;
+    }
+
 }

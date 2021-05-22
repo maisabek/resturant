@@ -28,8 +28,7 @@ import {PopoverModule} from "ngx-smart-popover";
 import { interceptors } from './services/index';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
-import { NgxParallaxModule } from '@yoozly/ngx-parallax';
+
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 import { ResturantDetailsComponent } from './components/resturant-details/resturant-details.component';
 
@@ -67,8 +66,7 @@ import { ResturantDetailsComponent } from './components/resturant-details/restur
     PopoverModule,
     HttpClientModule,
     ModalModule.forRoot(),
-    ParallaxModule,
-    NgxParallaxModule
+   
    ],
   providers: [interceptors],
   bootstrap: [AppComponent]

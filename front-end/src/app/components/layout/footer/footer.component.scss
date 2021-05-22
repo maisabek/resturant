@@ -110,17 +110,19 @@ button{
         width: 77% !important;
     }
     .footer2 ul{
-        margin: 0 7%;
-        width: 68%;
+        width: 100%;
+        margin: 0px -20%;
 
     }
     .footer2 ul li{
        
-        padding: 4px;
-        font-size: 11px;
-        width: 13%;
+        padding: 5px;
+    font-size: 11px;
+    width: 14%;
     }
-
+    .feedBack{
+        padding: 30px;
+    }
 
 }
 @media (min-width: 768px) and (max-width:991px){ /* small screen */ 

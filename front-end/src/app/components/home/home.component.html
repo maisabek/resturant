@@ -1,6 +1,5 @@
 <!-- start header -->
-<div class="header" ngx-parallax [active]="false">
-        <!-- <app-navbar></app-navbar> -->
+<div class="header">
     <div class="container">
         <div class="row">
         <div class="col-md-12">
@@ -23,23 +22,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12  mt-5 mb-5" >
-                <!-- <h5>Our Services</h5> -->
-                <h5 class="mt-4 mb-2">Enter In Every Card To See Our Services </h5>
-                <img src="assets/images/logo.png" class="ser-img" alt="">
+                <h5 class="mt-4 mb-2" class="wow tada" data-wow-duration="2s">Enter In Every Card To See Our Services </h5>
+                <img src="assets/images/logo.png" class="ser-img"  alt="">
             </div>
         <ng-container *ngFor="let item of innerPages">
-        <div class="col-md-4 h-75">
+        <div class="col-md-4 h-75" [class]="item.style" data-wow-duration="1.8s">
                 <a routerLink="/{{item.pagename}}">
                     <div class="allcontent">
                     <div class="content h-75">
-            <img [src]="item.img" class="w-100 h-100">
+            <img [src]="item.img" class="w-100 h-100" >
             
         </div>
         <div class="overlay">
             <p style="color:#9C7C57;font-weight: bold;margin: 27% 0px;">Enter To See {{item.title}}</p>
         </div>
     </div>
-            <!-- <p>{{item.title}}</p> -->
         </a>
         </div>
        
@@ -54,7 +51,7 @@
         <div class="row">
             <div class="col-md-12  mt-5 mb-5" >
                
-                <h5>some foods in our resturant</h5>
+                <h5 class="wow flipInY" data-wow-duration="4s">some foods in our resturant</h5>
                 <img src="assets/images/logo.png" class="ser-img" alt="">
             </div>
 
@@ -240,8 +237,8 @@
     <div style="margin-top: 7%;">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7 col-md-7 col-lg-4" style="margin-left: 8%;">
-                    <div style="background: white;padding: 60px;font-size: 20px;margin-top: 11%;" class="resturant-content w-100 h-95">
+                <div class="col-11 col-sm-11 col-md-7 col-lg-4" style="margin-left: 8%;">
+                    <div style="background: white;font-size: 20px;margin-top: 11%;" class="resturant-content w-100 h-95">
                    
                         <p style="text-align: center;color: #9C7C57;margin-top: 1%;font-family: fangsong;">Visit Our</p>
                     <h5>Resturant</h5>
@@ -249,10 +246,10 @@
                       <a href="" style="color:#9C7C57;margin: 0 20%;">Get Locations</a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-duration="2s">
                    <img src="assets/images/09.jpg" class="w-100 h-100" alt="">
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3 wow fadeInRight"  data-wow-duration="2s">
                     <img src="assets/images/08.jpg" class="w-100 h-100" alt="">
                 </div>
                
@@ -265,7 +262,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mt-5">
-                    <h5 style="text-align: center;color: #9C7C57;font-size: 20px;">Our Resturant</h5>
+                    <h5 style="text-align: center;color: #9C7C57;font-size: 20px;" class="wow tada" data-wow-duration="2s">Our Resturant</h5>
                         <img src="assets/images/logo.png" class="ser-img" alt="">
                 </div>
                 <div class="col-md-6 mt-5" style="height: 681px;">
@@ -276,8 +273,7 @@
                         <p style="color: rgb(241, 241, 241);font-family: cursive;text-align: center">Please call us at 1.800.456.6756 between 10am-6pm, Monday to Friday.</p>           
                     
                     </div>
-                <!-- <div class="location-img h-100"> -->
-                <!-- </div> -->
+               
             </div>
                 
                 </div>
@@ -297,14 +293,11 @@
     <div class="">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-lg-6">
+                <div class="col-md-8 col-lg-6 wow fadeInLeft" data-wow-duration="2s">
                     <div class="cardContainer">
                         <div class="cover">
                             <figure class="front">
-                                <!-- <img src="assets/images/44.png" class="w-100 h-25" alt=""> -->
-                                <!-- <div class="w-50" style="margin-top: 47%;margin-left: 27%;height: 90px;"> -->
-                                    <!-- <img src="assets/images/66.png" class="w-100 h-100" alt=""> -->
-                                <!-- </div> -->
+                                
                                 <h5 style="font-size: 18px;margin-top: 50%;">our appointements</h5>
                             </figure>
                             <figure class="back">
@@ -315,7 +308,6 @@
                             </p>
                             <p style="color: white;font-family: cursive;text-align: center;">10.30am - 3:00pm
                             </p>
-                            <!-- <img src="assets/images/logo.png" class="ser-img" style="margin: 5% 10%;" alt=""> -->
                              <h5 style="margin: 17% 0;">Dinner Time</h5>
                              <p style="color: white;text-align: center;font-family: cursive;">Monday to Sunday
                             </p>
@@ -332,7 +324,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-8 col-lg-5 ml-5 mt-5">
+                <div class="col-md-8 col-lg-5 ml-5 mt-5 wow tada" data-wow-duration="2s">
                     <div style="border:1px solid #9C7C57" class="w-100 p-2">
                         <div style="border:1px solid #9C7C57" class="w-100 p-5">
                             <h5>Reserve by Phone</h5>
