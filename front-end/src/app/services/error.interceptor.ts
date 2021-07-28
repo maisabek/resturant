@@ -9,7 +9,7 @@ export class errorInterceptor implements HttpInterceptor{
     constructor(private router:Router,private authService:AuthService){}
     intercept(req:HttpRequest<any>,next:HttpHandler){
         return next.handle(req).pipe(
-            catchError((err:HttpErrorResponse)=>{
+            catchError((err:HttpErrorResponse)=> {
                 if([401,403].indexOf(err.status) !== -1){
                     this.authService.logout()
                 }else if(err.status == 404){
@@ -20,6 +20,5 @@ export class errorInterceptor implements HttpInterceptor{
                 return throwError(err.statusText || err.message)
             })
         )
-
     }
 }

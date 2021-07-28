@@ -8,11 +8,13 @@
 }
 .navbar{
     //url(../../../../assets/images/03.png)
-    background: rgb(1, 16, 17);    // padding:30px;
+    background: rgb(1, 16, 17);    
+    // padding:10px;
     z-index: 66666;
     ul{
         margin: 2% 32%;
         width: 68%;
+        line-height: 21px;
         li{
             float: left;
             list-style-type: none;
@@ -40,7 +42,7 @@
   }
   .pos{
       position:fixed;
-      background:rgb(2, 38, 41);
+      background:rgb(1, 16, 17);
       top: 0px;
       left: 0px;
       width: 100%;
@@ -52,14 +54,22 @@
   .cart-li{margin-left: 44% !important;}
  
   @media (max-width: 767px ){/* mobile & tablet*/
+    .navbar{
+     
+      padding: 24px !important;
+  }
   .navbar ul{
     margin: 2px 0%;
     width: 100%;
+    line-height: 24px;
   }
   .cart-li{
     margin-left: 0% !important;
   }
   .example-sidenav{
-    width: 59%
+    width: 70%
+  }
+  .navbar ul li{
+    margin: 0 8% !important;
   }
 }

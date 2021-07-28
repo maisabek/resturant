@@ -237,7 +237,7 @@ img{
     margin-left: 22%;
 }
 .resturant-content{
-  margin-left: -10%;
+  margin-left: -8%;
   padding: 30px;
 }
 .cardContainer{
@@ -245,6 +245,15 @@ img{
     margin: 0 47%;
     height: 287px;
 }
+iframe{height:600px !important}
+.inner-pages .allcontent{
+    margin: 3% 0px;
+}
+.header .content {
+    
+    margin: 47% 0%;
+}
+.map{margin-left: 0% !important;}
 }
 @media (min-width: 768px) and (max-width:991px){ /* small screen */ 
     .inner-pages .ser-img{margin-left: 34%;}

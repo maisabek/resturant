@@ -17,12 +17,13 @@ export class HomeComponent implements OnInit {
  
 
 }
-
-
   ngOnInit(): void {
   }
   openDialog(templateRef:TemplateRef<any>){
     this.DialogRef.open(templateRef)
+  }
+  closeDialog(){
+    this.DialogRef.closeAll()
   }
   innerPages:any[]=[
     {pagename:"menu",img:"assets/images/Landing-inner-img.jpg",title:"our menu",style:"wow fadeInLeft"},

@@ -37,3 +37,9 @@ img{
 img:hover{
     transform: scale(1.5);
 }
+@media (max-width: 767px ){/* mobile & tablet*/
+   
+    .header .content{
+        margin: 20% 0px;
+    }
+}

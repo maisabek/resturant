@@ -4,6 +4,11 @@
 
         <mat-sidenav #sidenav mode="over" closed class="example-sidenav justify-content-center text-center"
             [fixedInViewport]="true">
+            <a (click)="sidenav.toggle()" style="float: right;color: rgb(2, 38, 41);margin: 5%;">
+                <i class="fa fa-times" style="font-size: 24px;cursor: pointer;" aria-hidden="true"></i>
+    
+               </a>
+               <div style="clear: both;"></div>
             <app-cart></app-cart>
         </mat-sidenav>
 
@@ -11,14 +16,14 @@
             <!-- <app-home></app-home> -->
             <div class="navbar" id="navbar" style="z-index: 38;">
                 <div class="container">
-                    <div class="col-md-1 col-3 ml-5" style="margin: 0 7%">
+                    <div class="col-md-1 col-4 ml-5" style="margin: 0 7%">
                        <a routerLink="">
-                        <div class="logo">
+                        <div class="logo w-100">
                             <img src="assets/images/logo2.png" class="w-100 h-100" alt="">
                         </div>
                     </a>
                     </div>
-                    <div class="col-md-9 col-7">
+                    <div class="col-md-9 col-6">
                         <div class="w-100">
                         <ul>
                             <li class="cart-li">
@@ -30,7 +35,9 @@
                                     </a>
                                 </li>
                                 <li style="margin-left:4%;"><a [matMenuTriggerFor]="menu">
-                                    <i i class="fa fa-ellipsis-v" aria-hidden="true" style="font-size:22px"></i>
+                                    <!-- <i i class="fa fa-ellipsis-v" aria-hidden="true" style="font-size:22px"></i> -->
+                                    <i class="fa fa-align-left" aria-hidden="true"></i>
+
                                 </a></li>
                                 <li><a *ngIf="authService.isLogin()">{{authService.username}}</a></li>
                             <div class="clearfix"></div>

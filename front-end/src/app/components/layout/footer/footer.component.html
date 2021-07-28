@@ -9,10 +9,10 @@
                                 </p>
                                 <div class="subscribe mb-3 mt-5">
                                 <div class="d-flex w-100">
-                                    <div class="w-75">
+                                    <div style="width: 60%;">
                                     <input type="text" class="w-100" placeholder="your emal address">
                                 </div>
-                                <div  class="subscribe-btn">
+                                <div  class="subscribe-btn" style="width: 40%;">
                                     <button class="w-100">SUBSCRIBE <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -31,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-1 col-2">
-                <img src="assets/images/logo2.png" class="w-100">
+                <!-- <img src="assets/images/logo2.png" class="w-100 h-100"> -->
             </div>
             <div class="col-md-8 col-10">
                     <ul>
@@ -76,6 +76,11 @@
 
 <ng-template #feedBackRef>
        <div class="feedBack">
+           <a (click)="closeDialog()">
+            <i class="fa fa-times" style="font-size: 24px;cursor: pointer;" aria-hidden="true"></i>
+
+           </a>
+
        <h3 class="mt-5 ml-5">Enter Your FeedBack</h3>
     <mat-form-field apperance="full" class="mt-5 mb-5">
        <mat-label>Enter Your FeedBack</mat-label>

@@ -15,5 +15,8 @@ export class FooterComponent implements OnInit {
   openDailog(templateRef:TemplateRef<any>){
     this.matDialog.open(templateRef)
   }
+  closeDialog(){
+    this.matDialog.closeAll()
+  }
 
 }

@@ -13,12 +13,13 @@
         input[type="text"],button{
             border: none;
             outline: none;
-            padding: 18px;
-            color: #9C7C57;
+            padding: 15px;
+            color: #807e7d;
             background: rgb(11, 46, 46);
             font-family: cursive;
         
         }
+        button{background: rgb(4, 15, 15);}
         .subscribe{margin: 0 27%;width: 50%;}
     }
 }
@@ -29,19 +30,21 @@
     padding: 20px;
     p{color:#9C7C57}
     ul{
-        margin: 0 73%;
-       width: 29%;
+        margin: 0 52%;
+       width: 33%;
         li{
             float: left;
             list-style-type: none;
             margin: 0px 4px;
             border: 1px solid gray;
-            padding: 6px;
-            border-radius: 3px;
+            padding-bottom: 6px;
+            padding-top: 7px;
+                        border-radius: 3px;
             cursor: pointer;
             width: 11%;
             line-height: 25%;
             text-align: center;
+            transition: all .5s ease-in-out;
         }
         a{color: white}
     }
@@ -58,6 +61,7 @@
     cursor: pointer;
     }
 }
+
 h5{
     color: rgb(7, 41, 41);
 }
@@ -99,7 +103,7 @@ button{
         z-index:22222222222
     }
 }
-
+.fa-times{float: right;}
 
 @media (max-width: 767px ){/* mobile & tablet*/
     .footer1 .content .subscribe{
@@ -107,7 +111,7 @@ button{
         width: 95%;
     }
     .footer1 .subscribe-btn{
-        width: 77% !important;
+        width: 40% !important;
     }
     .footer2 ul{
         width: 100%;
@@ -123,7 +127,13 @@ button{
     .feedBack{
         padding: 30px;
     }
-
+    img{display: none;}
+}
+.footer2 ul li:hover{
+    background:white;
+}
+.footer2 ul li:hover a{
+    color: rgb(7, 41, 41) !important;
 }
 @media (min-width: 768px) and (max-width:991px){ /* small screen */ 
    .footer1 .content .subscribe{
@@ -131,7 +141,7 @@ button{
         width: 95%;
     }
     .footer1 .subscribe-btn{
-        width: 77% !important;
+        width: 40% !important;
     }
     .footer2 ul{
         margin: 0 7%;
